@@ -1,42 +1,32 @@
 # Submission Reminder App
 
 ## Overview
+This application helps students keep track of their assignment submissions. It sends reminders for assignments that haven't been submitted.
 
-The Submission Reminder App is designed to alert students about upcoming assignment deadlines. This application provides a simple way to automate reminders and ensure that students are aware of their submission status. It is built using shell scripting and can be easily customized and extended.
+## Directory Structure
+- `submission_reminder_app_Manziine/`
+  - `application/`
+  - `modules/`
+  - `resources/`
+  - `configuration/`
 
-## Setup
+## Setup Instructions
+1. Clone the repository.
+2. Run the `create_environment.sh` script to set up the environment.
+3. Run the `startup.sh` script to start the reminder application.
 
-To set up the environment, follow these steps:
+## Script Explanations
+### create_environment.sh
+This script sets up the environment by creating necessary directories and files.
 
-1. **Clone the Repository**:
+### startup.sh
+This script starts the reminder application.
 
-```bash
-git clone https://github.com/{your_github_username}/submission_reminder_app_{your_github_username}.git
-cd submission_reminder_app_{your_github_username}
+### application/reminder.sh
+This script handles the logic for sending assignment reminders.
 
-Run the create_environment.sh Script:
+### modules/functions.sh
+This script contains helper functions used in the reminder application.
 
-./create_environment.sh
-
-When prompted, enter your name. This will create the directory submission_reminder_{yourName} with the required structure and files
-
-The application's directory structure will be organized as follows:
-
-submission_reminder_{yourName}/
-├── app/
-│   └── reminder.sh
-├── assets/
-│   └── submissions.txt
-├── config/
-│   └── config.env
-├── modules/
-│   └── functions.sh
-└── startup.sh
-
-Running the Application
-Change to the Application Directory:
-
-cd submission_reminder_{yourName}
-
-Run the startup.sh Script:
-./startup.sh
+### resources/submissions.txt
+This file lists students and their submission statuses.
